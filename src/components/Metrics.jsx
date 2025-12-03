@@ -30,7 +30,7 @@ export default function Metrics() {
           </Card>
 
           {/* Card 2 - Community Members */}
-          <Card className="h-64 flex w-full justify-center" glowColor="purple">
+          <Card className="h-64 flex w-full justify-center" glowColor="noglow">
             <div className="top-4 flex items-center gap-2 w-full">
               <div className="w-12 h-12 rounded-full bg-[#6d28d9] border border-white/10 flex items-center justify-center text-white">
                 <X size={20} strokeWidth={2.5} />
@@ -128,7 +128,10 @@ export default function Metrics() {
           </Card>
 
           {/* Card 5 - Stars Rated */}
-          <Card className="h-64 justify-center items-center text-center relative">
+          <Card
+            className="h-64 justify-center items-center text-center relative"
+            glowColor="noglow"
+          >
             <h3 className="text-8xl font-bold text-white mb-2 tracking-tight">
               <CountUp from={0} to={4.8} duration={0.07} />
             </h3>

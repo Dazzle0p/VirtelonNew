@@ -1,103 +1,155 @@
-import React, { useState, useEffect } from "react";
-import { Menu, X, ChevronRight, Phone } from "lucide-react";
-import SimpleButton from "../utils/SimpleButton";
+import React, { useState, useEffect, useRef } from "react";
+import { Menu, X, Phone } from "lucide-react";
 import logo from "../assets/logo.png";
-
+import GlassButton from "../utils/GlassButton";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
-  // Handle scroll effect for background opacity adjustment
+  const sectionIds = ["home", "about", "services"];
+
+  // Track scroll to shrink / float navbar
   useEffect(() => {
-    const handleScroll = () => {
-      // Set scrolled state true after scrolling 20 pixels down
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // --- Main Navigation Bar ---
+  // Intersection Observer for active section highlight
+  useEffect(() => {
+    const options = {
+      threshold: 0.6, // 60% of the section must be visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, options);
+
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false);
+  };
+
+  const navItems = [
+    { name: "Home", sectionId: "home" },
+    { name: "About", sectionId: "about" },
+    { name: "Services", sectionId: "services" },
+    { name: "ROBs", sectionId: "robs" },
+  ];
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 p-4" role="banner">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-6xl">
+      {/* GLASS + NEON FLOATING NAV */}
       <nav
         className={`
-          max-w-7xl mx-auto flex items-center justify-between h-[65px] px-6 sm:px-8 lg:px-10 rounded-[62px] 
-          transition-all duration-500 border border-neon-purple/30 
-          shadow-neon-lg
-          ${
-            scrolled
-              ? "bg-background-dark/70 backdrop-blur-md shadow-neon-sm"
-              : "bg-background-dark/30 backdrop-blur-sm shadow-neon-lg"
-          }
-        `}
-        aria-label="Main Navigation"
+    flex items-center justify-between px-6 h-14 rounded-full transition-all duration-500 hover:cursor-pointer
+    relative overflow-hidden backdrop-blur-xl bg-black/30 border border-gray-500/10
+
+    /* 3D Hard Shadows for depth */
+    shadow-[0_2px_8px_rgba(0,0,0,0.6)]
+
+
+    /* Inset shadows for carved 3D edges */
+    before:content-[''] before:absolute before:inset-0 before:rounded-full
+    before:shadow-[inset_0_2px_3px_rgba(255,255,255,0.2),inset_0_-4px_6px_rgba(0,0,0,0.6)]
+
+    /* Neon glow edges */
+    after:content-[''] after:absolute after:inset-0 after:rounded-full
+    after:shadow-[0_0_6px_#a855f7,0_0_2px_#a855f7,inset_0_0_4px_rgba(168,85,247,0.3)]
+
+    /* Slight floating / lift animation */
+    animate-[float_4s_ease-in-out_infinite]
+
+    ${scrolled ? "scale-[0.96] -translate-y-1" : "scale-100"}
+  `}
       >
-        {/* Left: Brand Logo */}
-        <div className="flex items-center gap-3 group cursor-pointer select-none">
+        {/* Logo */}
+        <div className="flex items-center gap-2 cursor-pointer">
           <img
             src={logo}
-            alt="V"
-            className="w-8 h-8 flex items-center justify-center"
+            alt="Logo"
+            className="w-9 h-9 drop-shadow-[0_0_8px_#a855f7]"
           />
         </div>
 
-        {/* Right: Desktop CTA Button & Mobile Toggle */}
-        <div className="flex items-center space-x-4">
-          {/* Desktop CTA Button (Glass/Neon Style) */}
-          <div>
-            <SimpleButton glowColor="purple">
-              {/* Inner span provides the dark, blurry background for the 'glass' effect */}
-              <span className="relative flex gap-1 items-center">
-                Contact Us
-                <Phone
-                  size={16}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
-              </span>
-            </SimpleButton>
-          </div>
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-6">
+          {navItems.map((item) => (
+            <button
+              key={item.name}
+              onClick={() => scrollToSection(item.sectionId)}
+              className={`
+                text-md transition-all duration-300 relative z-10
+                ${
+                  activeSection === item.sectionId
+                    ? "text-neon-purple font-semibold "
+                    : "text-white/60 hover:text-white"
+                }
+              `}
+            >
+              {item.name}
 
-          {/* Mobile Menu Button (Hamburger) */}
-          {/* <button
-            className="md:hidden p-2 text-white/80 hover:text-white transition-colors"
+              {activeSection === item.sectionId && (
+                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 h-0.5 w-4 bg-neon-purple rounded-full" />
+              )}
+            </button>
+          ))}
+        </div>
+
+        {/* CTA + Mobile Toggle */}
+        <div className="flex items-center gap-3 z-10">
+          <GlassButton
+            className="hidden sm:flex items-center gap-2 rounded-full transition-all duration-300"
+            children="Contact Us"
+            icon={<Phone size={14} />}
+          />
+
+          {/* Mobile Toggle */}
+          <button
+            className="md:hidden p-2 text-purple-300"
             onClick={() => setIsOpen(!isOpen)}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-            aria-label="Toggle navigation menu"
           >
-            {isOpen ? (
-              <X size={28} className="text-neon-purple drop-shadow-neon-sm" />
-            ) : (
-              <Menu
-                size={28}
-                className="text-neon-purple drop-shadow-neon-sm"
-              />
-            )}
-          </button> */}
+            {isOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
         </div>
       </nav>
 
-      {/* Mobile Menu Dropdown */}
-      {/* <div
-        id="mobile-menu"
-        className={`md:hidden absolute top-[80px] left-4 right-4 transition-all duration-300 ease-in-out overflow-hidden 
-          rounded-xl border border-neon-purple/20 shadow-neon-sm
-          bg-background-secondary/90 backdrop-blur-lg ${
-            isOpen ? "max-h-40 py-4" : "max-h-0"
-          }`}
-      >
-        <div className="flex flex-col items-center space-y-4">
-          <button
-            className="w-11/12 h-[48px] rounded-[62px] font-semibold text-sm text-white transition-all duration-300 ease-in-out
-              bg-neon-purple/70 shadow-button-glow border border-neon-purple/50
-              hover:bg-neon-purple hover:shadow-[0_0_25px_var(--color-neon-purple)]"
-            onClick={() => setIsOpen(false)} // Close on click
-          >
-            Start Build
-          </button>
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden mt-2 p-4 rounded-2xl bg-black/70 backdrop-blur-xl border border-purple-500/20 shadow-[0_0_15px_rgba(168,85,247,0.25)] animate-fadeIn">
+          {navItems.map((item) => (
+            <button
+              key={item.name}
+              onClick={() => scrollToSection(item.sectionId)}
+              className={`
+                block w-full text-left py-3 text-white/70 border-b border-purple-500/10
+                transition-all duration-300
+                ${
+                  activeSection === item.sectionId
+                    ? "text-neon-purple "
+                    : "hover:text-white"
+                }
+              `}
+            >
+              {item.name}
+            </button>
+          ))}
         </div>
-      </div> */}
+      )}
     </header>
   );
 };

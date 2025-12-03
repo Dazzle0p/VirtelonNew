@@ -1,4 +1,5 @@
 import React from "react";
+import Layout from "./components/Layout/Layout";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Metrics from "./components/Metrics";
@@ -7,6 +8,8 @@ import HowWeDeliver from "./components/HowWeDeliver";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import { PricingSection } from "./components/PricingSection";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 // Important: You must ensure the 'Megabyte' font is correctly imported and available,
 // likely through your public/index.html or the main CSS file.
@@ -15,23 +18,13 @@ import { PricingSection } from "./components/PricingSection";
 
 const App = () => {
   return (
-    // Set the overall background and default text color for the application
-    <div
-      className="min-h-screen  text-white antialiased"
-      style={{
-        background:
-          "radial-gradient(50% 25% at 50% 0%, #361D88 0%, #170C39 50%, #000000 100%)",
-      }}
-    >
-      <Navbar />
-      <Hero />
-      <Metrics />
-      <Whatwebuild />
-      <PricingSection />
-      <HowWeDeliver />
-      <FinalCTA />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

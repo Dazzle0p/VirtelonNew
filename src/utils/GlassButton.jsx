@@ -32,7 +32,6 @@ const GlassButton = React.forwardRef(
         ref={ref}
         className={`
           relative group overflow-hidden rounded-full p-px
-          focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-[#030014]
           ${className}
         `}
         {...rest}
