@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
 import SimpleButton from "../utils/SimpleButton";
-import CardSpotlight from "../utils/CardSpotLight";
+import CardSpotlight from "../utils/CardSpotlight";
 
 const PricingTier = ({ name, price, description, features, isPopular }) => {
   return (
