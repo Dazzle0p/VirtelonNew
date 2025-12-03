@@ -1,0 +1,62 @@
+/* src/index.css */
+
+/* 1. Import Tailwind CSS (This replaces @tailwind base/components/utilities) */
+@import "tailwindcss";
+
+/* 2. Define Custom Design Tokens using the @theme directive */
+@theme {
+  /* COLORS: Custom colors map to --color-* CSS variables */
+  /* We define the background colors here for easy use */
+  --color-background-dark: #060406;
+  --color-background-secondary: #0a0a0f;
+  --color-neon-purple: #9f79f2;
+  --color-dark-purple: #170c39;
+  --color-red-glow: #ff3838; /* For the red/pink gradient in the CTA */
+
+  /* SHADOWS: Custom shadows map to --shadow-* CSS variables */
+  /* Note: V4 changed the scale, so we use custom names */
+  --shadow-neon-sm: 0 0 15px rgba(147, 96, 255, 0.6);
+  --shadow-neon-lg: 0 0 40px rgba(120, 58, 255, 0.2);
+  --shadow-button-glow: 0 4px 24px 7px rgba(255, 255, 255, 0.25);
+
+  /* FONT FAMILY: Custom font maps to --font-* CSS variables */
+  /* NOTE: You must ensure 'Megabyte' font is loaded externally (e.g., via index.html) */
+  --font-megabyte: Roboto, sans-serif;
+
+  /* ANIMATIONS: Custom animations require both the @keyframes and the --animate-* variable */
+  --animate-fade-in: fadeIn 0.5s ease-out;
+
+  /* Define the keyframes needed for the animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* 3. Apply Global Base Styles */
+body {
+  background-color: var(
+    --color-background-dark
+  ); /* Use the custom CSS variable */
+  color: white;
+  scroll-behavior: smooth;
+  /* Apply the custom font globally */
+  font-family: var(--font-megabyte);
+}
+
+@keyframes dash {
+  from {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+  }
+}
