@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-export default CardSpotlight = ({ children, className = "" }) => {
+const CardSpotlight = ({ children, className = "" }) => {
   const divRef = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
@@ -34,3 +34,5 @@ export default CardSpotlight = ({ children, className = "" }) => {
     </div>
   );
 };
+
+export default CardSpotlight;
