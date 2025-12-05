@@ -12,6 +12,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactUs from "./pages/ContactUs";
+import ROBSection from "./pages/ROBSection";
 
 // Important: You must ensure the 'Megabyte' font is correctly imported and available,
 // likely through your public/index.html or the main CSS file.
@@ -26,6 +27,7 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact-us" element={<ContactUs />} />
+          <Route path="robs" element={<ROBSection />} />
         </Route>
       </Routes>
     </BrowserRouter>

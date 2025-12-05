@@ -23,7 +23,6 @@
   --shadow-button-glow: 0 4px 24px 7px rgba(255, 255, 255, 0.25);
 
   /* FONT FAMILY: Custom font maps to --font-* CSS variables */
-  /* NOTE: You must ensure 'Megabyte' font is loaded externally (e.g., via index.html) */
   --font-megabyte: Roboto, sans-serif;
 
   /* ANIMATIONS: Custom animations require both the @keyframes and the --animate-* variable */
