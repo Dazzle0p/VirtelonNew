@@ -10,6 +10,8 @@ import Footer from "./components/Footer";
 import { PricingSection } from "./components/PricingSection";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ContactUs from "./pages/ContactUs";
 
 // Important: You must ensure the 'Megabyte' font is correctly imported and available,
 // likely through your public/index.html or the main CSS file.
@@ -22,6 +24,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="contact-us" element={<ContactUs />} />
         </Route>
       </Routes>
     </BrowserRouter>

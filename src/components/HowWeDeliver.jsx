@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
+import SectionHeader from "@/utils/SectionHeader";
 
 // --- Utility for Tailwind ---
 function cn(...inputs) {
@@ -268,57 +269,14 @@ const HowWeDeliver = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16 ">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={
-              shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }
-            }
-            transition={{ duration: 0.45 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wide text-[#9F79F2] mb-4"
-          >
-            {/* Inline sparkles SVG */}
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden
-            >
-              <path
-                d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14 10.5 9.5 6 8l4.5-1.5L12 2z"
-                fill="#9F79F2"
-              />
-            </svg>
-            <span>OUR METHODOLOGY</span>
-          </motion.div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={
-              shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }
-            }
-            transition={{ delay: 0.05, duration: 0.45 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-4"
-          >
-            How We{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#9F79F2] to-blue-500">
-              Deliver
-            </span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={
-              shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }
-            }
-            transition={{ delay: 0.12, duration: 0.45 }}
-            className="text-white/60 text-lg max-w-2xl mx-auto"
-          >
-            A rigorous, four-step framework designed to eliminate risk and
-            maximize impact from day one.
-          </motion.p>
-        </div>
+        <SectionHeader
+          title="How We"
+          highlight="Deliver"
+          description="A rigorous, four-step framework designed to eliminate risk and
+            maximize impact from day one."
+          tag="OUR METHODOLOGY"
+        />
 
         {/* ----- Responsive Content: Desktop (tabs + card) OR Mobile Carousel ----- */}
         {!isMobile ? (

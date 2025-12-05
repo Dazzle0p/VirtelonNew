@@ -3,18 +3,41 @@ import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
 import SimpleButton from "../utils/SimpleButton";
 import CardSpotlight from "../utils/CardSpotlight";
+import SectionHeader from "../utils/SectionHeader";
+import { useNavigate } from "react-router-dom";
 
 const PricingTier = ({ name, price, description, features, isPopular }) => {
   return (
     <CardSpotlight
       className={`h-full ${
-        isPopular ? "border-[#361D88]" : "border-white/10"
+        isPopular ? "border-neon-purple" : "border-white/10"
       } border-2`}
     >
       <div className="relative h-full p-6 flex flex-col">
         {isPopular && (
-          <span className="bg-primary/10 text-primary rounded-full w-fit inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 text-xs font-semibold tracking-wide text-[#9F79F2] mb-4">
-            <Star className="h-3 w-3 " />
+          <span
+            className="
+    inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit
+    text-[10px] font-semibold tracking-wide text-[#d8b4fe]
+
+    /* Glass layer */
+    bg-white/10 backdrop-blur-md border border-white/20
+
+    /* 3D hard edges */
+    shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.4),0_3px_8px_rgba(0,0,0,0.6)]
+
+    /* Neon glow */
+    after:content-[''] after:absolute after:inset-0 after:rounded-full
+    after:shadow-[0_0_8px_rgba(159,121,242,0.8),0_0_3px_rgba(159,121,242,0.6)]
+
+    /* Slight lift animation */
+    relative animate-[float_3s_ease-in-out_infinite]
+  "
+          >
+            <Star
+              size={11}
+              className="text-[#d8b4fe] drop-shadow-[0_0_6px_rgba(159,121,242,0.9)]"
+            />
             Most Popular
           </span>
         )}
@@ -48,31 +71,14 @@ const PricingTier = ({ name, price, description, features, isPopular }) => {
 };
 
 export const PricingSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="container px-4 py-24 mx-auto">
-      <div className="max-w-2xl mx-auto text-center mb-12">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6"
-        >
-          Choose Your{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-[#9F79F2] to-blue-500">
-            Plan
-          </span>
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.5 }}
-          className="text-lg text-gray-400"
-        >
-          Simple Pricing, Scaled to your needs
-        </motion.p>
-      </div>
-
+      <SectionHeader
+        title="Choose Your"
+        highlight="Plan"
+        description="Simple Pricing, Scaled to your needs"
+      />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <PricingTier
           name="Foundation"
@@ -114,6 +120,26 @@ export const PricingSection = () => {
           ]}
         />
       </div>
+      {/* Bottom CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="text-center mt-16"
+      >
+        <p className="text-white/60 mb-4">
+          Need a custom solution? We're here to help.
+        </p>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="text-[#5358e7] hover:text-[#538ee8]/80 font-medium transition-colors"
+          onClick={() => navigate("contact-us")}
+        >
+          Contact our sales team →
+        </motion.button>
+      </motion.div>
     </section>
   );
 };

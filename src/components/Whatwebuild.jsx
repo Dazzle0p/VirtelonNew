@@ -1,33 +1,17 @@
 import GlassCard from "../utils/GlassCard";
 import { motion } from "framer-motion";
+import SectionHeader from "../utils/SectionHeader";
 
 const Whatwebuild = () => {
   return (
     <section className="py-20 md:py-28 bg-[#050507] text-white px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <div className="max-w-2xl mx-auto text-center mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6"
-          >
-            What we{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#9F79F2] to-blue-500">
-              Build
-            </span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-            className="text-lg text-gray-400"
-          >
-            Smart solutions. Seamless performance. Real results.
-          </motion.p>
-        </div>
+        <SectionHeader
+          title="What we"
+          highlight="Build"
+          description="Smart solutions. Seamless performance. Real results."
+        />
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

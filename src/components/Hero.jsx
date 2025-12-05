@@ -2,18 +2,36 @@ import React from "react";
 import GlassButton from "../utils/GlassButton";
 import { ChevronRight } from "lucide-react";
 import { Squircle } from "lucide-react";
+import GetStartedButton from "./ui/GetStartedButton";
 export default function Hero() {
   return (
     <section className="relative xl:min-h-screen w-full flex flex-col items-center justify-center pt-24 pb-12">
       {/* Background Gradient */}
+
       <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none" />
 
       <div className="relative z-10 flex flex-col items-center justify-center px-6 max-w-6xl mx-auto text-center flex-1">
         {/* Top Badge */}
-        <div className="mt-10 md:mt-5 mb-10 px-6 py-2 rounded-full border border-purple-400/30 bg-purple-950/30 backdrop-blur-sm">
-          <span className="text-sm font-medium text-white/90 tracking-wide">
-            Trusted to Deliver.
-          </span>
+        <div className="mt-10 md:mt-5 mb-10 px-6 py-2 rounded-full">
+          <button
+            type="button"
+            className="group relative z-60 mx-auto rounded-full border border-[#361D88]/40 bg-[#170C39]/40 px-6 py-1 text-xs backdrop-blur transition-all duration-300 hover:scale-105  hover:shadow-[0_0_20px_#361D88] active:scale-100 md:text-sm"
+          >
+            {/* Top Glow Line */}
+            <div className="absolute inset-x-0 -top-px mx-auto h-0.5 w-1/2 bg-linear-to-r from-transparent via-[#361D88] to-transparent shadow-2xl transition-all duration-500 group-hover:w-3/4"></div>
+
+            {/* Bottom Glow Line */}
+            <div className="absolute inset-x-0 -bottom-px mx-auto h-0.5 w-1/2 bg-linear-to-r from-transparent via-[#361D88] to-transparent shadow-2xl transition-all duration-500 group-hover:h-px"></div>
+
+            <span
+              className="relative text-white"
+              style={{
+                textShadow: "0 0 6px #361D88, 0 0 12px #170C39",
+              }}
+            >
+              Trust to Deliver
+            </span>
+          </button>
         </div>
 
         {/* Main Headline */}
@@ -36,16 +54,7 @@ export default function Hero() {
 
         {/* CTA Button */}
 
-        <GlassButton variant="outline">
-          {/* Inner span provides the dark, blurry background for the 'glass' effect */}
-          <span className="relative flex gap-1 items-center text-xl tracking-widest text-gray-900">
-            Initiate
-            <ChevronRight
-              size={16}
-              className="text-gray-900 group-hover:translate-x-1 transition-transform"
-            />
-          </span>
-        </GlassButton>
+        <GetStartedButton />
 
         {/* Bottom Small Text */}
         <p className="mt-6 text-xs text-gray-500 tracking-wide">
