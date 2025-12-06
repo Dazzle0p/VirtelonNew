@@ -5,7 +5,7 @@ import { Squircle } from "lucide-react";
 import GetStartedButton from "./ui/GetStartedButton";
 export default function Hero() {
   return (
-    <section className="relative xl:min-h-screen w-full flex flex-col items-center justify-center pt-24 pb-12">
+    <section className="relative xl:min-h-screen w-full flex flex-col items-center justify-center pt-10 pb-12">
       {/* Background Gradient */}
 
       <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none" />

@@ -17,7 +17,7 @@ const AboutPage = () => {
 
       <div className="relative z-10">
         {/* ================= HERO SECTION ================= */}
-        <section className="pt-32 pb-32 md:pt-48 md:pb-40 px-6 text-center max-w-7xl mx-auto">
+        <section className="pt-32 pb-32 md:pt-30 md:pb-40 px-6 text-center max-w-7xl mx-auto">
           {/* Floating Badge */}
           <div className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-md mb-12 animate-float">
             <span className="relative flex h-2.5 w-2.5">

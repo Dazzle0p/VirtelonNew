@@ -23,7 +23,7 @@ export default function GlassCard({
 
   return (
     <div
-      className="relative p-10 rounded-4xl border border-white/10
+      className=" relative p-10 rounded-4xl border border-white/10
         transition-all duration-500 ease-out
         hover:scale-[1.02] hover:border-white/15
         overflow-hidden backdrop-blur-xl"
@@ -40,7 +40,7 @@ export default function GlassCard({
 
       {/* Content */}
       <div className="relative z-10">
-        <h3 className="text-4xl font-bold text-white mb-4 tracking-tight">
+        <h3 className="text-4xl text-center font-bold text-white mb-4 tracking-tight">
           {title}
         </h3>
         <p className="text-sm text-white/90 mb-8 leading-relaxed max-w-md">
@@ -48,10 +48,10 @@ export default function GlassCard({
         </p>
 
         {/* Pills */}
-        <div className="space-y-3 mb-10">
+        <div className="flex flex-col items-center md:inline-block space-y-3 w-full mb-10">
           {pills.map((pill, index) => (
             <React.Fragment key={index}>
-              <div className="inline-block px-6 py-2.5 rounded-full bg-white/8 border border-white/20 text-white text-sm font-medium backdrop-blur-md">
+              <div className="inline-block px-15 py-2.5 rounded-full bg-white/8 border border-white/20 text-white text-sm font-medium backdrop-blur-md">
                 {pill}
               </div>
               {index < pills.length - 1 && <br />}

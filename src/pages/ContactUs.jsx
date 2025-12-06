@@ -57,14 +57,14 @@ const ContactUs = () => {
   };
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-black">
       {/* ---------------- HERO ---------------- */}
       <section className="pt-32 pb-12 px-4 relative overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[400px] pointer-events-none"
           style={{
             background:
-              "radial-gradient(54.76% 50% at 50% 0%, #361D88 0%, #170C39 50%, transparent 100%)",
+              "radial-gradient(54.76% 50% at 50% 0%, #361D88 0%, #170C39 50%, #000000, 100%)",
           }}
         />
 
