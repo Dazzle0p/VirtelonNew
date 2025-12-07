@@ -10,7 +10,7 @@ export default function GetStartedButton() {
       transition={{ duration: 0.5, delay: 0.3 }}
       className="flex items-center justify-center"
     >
-      <a href="/docs/components/theme-toggle-animations">
+      <a href="/robs">
         <div className="group cursor-pointer border-2 border-[#361D88] bg-[##3842ffa1] gap-2 h-[60px] flex items-center p-[10px] rounded-full">
           <div className="border-2 border-[#361D88] bg-linear-to-r from-[#361D88] to-blue-500 h-[40px] rounded-full flex items-center justify-center text-white">
             <p className="font-medium tracking-tight mr-3 ml-3 flex items-center gap-2 justify-center text-base">

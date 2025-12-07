@@ -1,18 +1,14 @@
 import React from "react";
 import Layout from "./components/Layout/Layout";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Metrics from "./components/Metrics";
-import Whatwebuild from "./components/Whatwebuild";
-import HowWeDeliver from "./components/HowWeDeliver";
-import FinalCTA from "./components/FinalCTA";
-import Footer from "./components/Footer";
-import { PricingSection } from "./components/PricingSection";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactUs from "./pages/ContactUs";
 import ROBSection from "./pages/ROBSection";
+import ProjectPage from "./pages/Projects";
+import AdvancedEngineering from "./pages/AdvancedEngineering";
+import CoreBuilds from "./pages/CoreBuilds";
+import ServicesPage from "./pages/ServicesPage";
 
 // Important: You must ensure the 'Megabyte' font is correctly imported and available,
 // likely through your public/index.html or the main CSS file.
@@ -28,6 +24,10 @@ const App = () => {
           <Route path="about" element={<AboutPage />} />
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="robs" element={<ROBSection />} />
+          <Route path="projects" element={<ProjectPage />} />
+          <Route path="adv-eng" element={<AdvancedEngineering />} />
+          <Route path="core-builds" element={<CoreBuilds />} />
+          <Route path="services" element={<ServicesPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

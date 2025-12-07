@@ -2,6 +2,7 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import GlassButton from "./GlassButton";
+import { useNavigate } from "react-router-dom";
 export default function GlassCard({
   title,
   description,
@@ -9,7 +10,9 @@ export default function GlassCard({
   gradientStyle,
   glowColor = "purple",
   glowPosition = "center",
+  to,
 }) {
+  const navigate = useNavigate();
   const glowColors = {
     red: "bg-red-600/20",
     blue: "bg-blue-600/20",
@@ -61,13 +64,11 @@ export default function GlassCard({
 
         {/* Button with glassmorphism and reflection */}
         <div className="relative inline-block">
-          <GlassButton>
-            EXPLORE
-            <ChevronRight
-              size={16}
-              className=" group-hover:translate-x-1 transition-transform"
-            />
-          </GlassButton>
+          <GlassButton
+            children="EXPLORE"
+            icon={<ChevronRight size={16} />}
+            onClick={() => navigate(to)}
+          />
           {/* Bottom reflection/glow */}
           <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-32 h-8 bg-purple-600/30 blur-2xl rounded-full" />
         </div>

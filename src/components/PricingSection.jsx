@@ -4,27 +4,6 @@ import { Check, Star, ArrowRight, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import SectionHeader from "@/utils/SectionHeader";
 
-// ----------------- Helper Components -----------------
-
-// const SectionHeader = ({ title, highlight, description }) => (
-//   <div className="text-center mb-16 max-w-3xl mx-auto px-4">
-//     <motion.div
-//       initial={{ opacity: 0, y: -20 }}
-//       whileInView={{ opacity: 1, y: 0 }}
-//       viewport={{ once: true }}
-//       transition={{ duration: 0.6 }}
-//     >
-//       <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-//         <span className="text-white drop-shadow-sm">{title}</span>{" "}
-//         <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-indigo-300 animate-gradient-x bg-300%">
-//           {highlight}
-//         </span>
-//       </h2>
-//       <p className="text-lg text-slate-400 leading-relaxed">{description}</p>
-//     </motion.div>
-//   </div>
-// );
-
 const GlassButton = ({
   children,
   className = "",
@@ -130,7 +109,7 @@ const PricingTier = ({ name, price, description, features, isPopular }) => {
             </p>
           </div>
 
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8" />
+          <div className="w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent mb-8" />
 
           <ul className="space-y-4 mb-8 grow">
             {features.map((feature, i) => (
@@ -170,9 +149,10 @@ export const PricingSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative w-full py-24 md:py-32 overflow-hidden">
+    <section className="relative w-full py-5 md:py-15 overflow-hidden">
       <div className="container px-4 mx-auto relative z-10">
         <SectionHeader
+          tag="SUBSCRIPTIONS"
           title="Choose Your"
           highlight="Plan"
           description="Transparent pricing tailored to scale with your product's lifecycle."

@@ -38,19 +38,13 @@ const Footer = () => {
   );
 
   return (
-    <footer className="pt-16 pb-6 bg-background-dark text-white">
+    <footer className="pt-5 md:pt-16 md:pb-6 bg-background-dark text-white">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+        <div className="flex flex-col text-center md:text-start md:grid md:grid-cols-2 gap-12 mb-12">
           <div className="space-y-4">
-            <svg width="50" height="50" viewBox="0 0 40 40">
-              <path d="M20 5L8 35H14L20 20L26 35H32L20 5Z" fill="url(#foot)" />
-              <defs>
-                <linearGradient id="foot" x1="8" y1="5" x2="32" y2="35">
-                  <stop stopColor="#9F79F2" />
-                  <stop offset="1" stopColor="#7C3AED" />
-                </linearGradient>
-              </defs>
-            </svg>
+            <div className="w-full flex justify-center md:inline-block">
+              <img className="h-10 w-10 " src={logo} alt="Vertelon" />
+            </div>
 
             <h4 className="text-xl font-bold">
               Delivering what others only claim.

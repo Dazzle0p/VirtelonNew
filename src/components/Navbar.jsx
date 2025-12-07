@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { href, Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import GlassButton from "../utils/GlassButton";
 
@@ -9,11 +9,13 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
+    { name: "Services", href: "services" },
     { name: "ROBs", href: "/robs" },
+    { name: "Projects", href: "/projects" },
   ];
 
   // Track scroll to shrink / float navbar
@@ -53,7 +55,32 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => {
-            const isActive = location.pathname === link.href;
+            const isActive = link.href && location.pathname === link.href;
+
+            if (link.scrollTo) {
+              const isActive = false;
+              return (
+                <button
+                  key={link.name}
+                  onClick={() => {
+                    if (location.pathname !== "/") {
+                      navigate("/#service");
+                      return;
+                    }
+
+                    const section = document.getElementById(link.scrollTo);
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                    setIsOpen(false);
+                  }}
+                  className={`z-10 text-md transition-all duration-300 text-white/60 hover:text-white`}
+                >
+                  {link.name}
+                </button>
+              );
+            }
+
             return (
               <Link
                 key={link.name}

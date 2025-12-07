@@ -1,9 +1,8 @@
 import React from "react";
-import GlassButton from "../utils/GlassButton";
-import { ChevronRight } from "lucide-react";
-import { Squircle } from "lucide-react";
 import GetStartedButton from "./ui/GetStartedButton";
+import { useNavigate } from "react-router-dom";
 export default function Hero() {
+  const navigate = useNavigate();
   return (
     <section className="relative xl:min-h-screen w-full flex flex-col items-center justify-center pt-10 pb-12">
       {/* Background Gradient */}
