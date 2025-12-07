@@ -48,7 +48,7 @@ const PricingCard = ({ plan, index }) => {
           isHovered ? "border-white/30" : "border-white/10"
         } ${
           plan.isPopular
-            ? "bg-gradient-to-br from-white/[0.03] to-white/[0.01]"
+            ? "bg-linear-to-br from-white/[0.03] to-white/[0.01]"
             : ""
         }`}
       >
@@ -70,7 +70,7 @@ const PricingCard = ({ plan, index }) => {
         </div>
 
         {/* Header */}
-        <div className="relative z-10 mb-8">
+        <div className="relative z-10 mb-4">
           <div className="flex items-start justify-between mb-4">
             <div>
               <h3 className="text-2xl font-bold text-white tracking-tight mb-2">
@@ -87,13 +87,13 @@ const PricingCard = ({ plan, index }) => {
         </div>
 
         {/* Divider */}
-        <div className="w-full h-px bg-gradient-to-r from-white/10 via-white/5 to-transparent mb-8" />
+        <div className="w-full h-px bg-gradient-to-r from-white/10 via-white/5 to-transparent mb-5" />
 
         {/* Price */}
         <div className="mb-8">
           <div className="flex items-baseline gap-1">
             <span
-              className="text-4xl font-bold"
+              className="text-3xl font-bold"
               style={{ color: plan.accentColor }}
             >
               {plan.price}
