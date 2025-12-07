@@ -4,6 +4,7 @@ import Metrics from "../components/Metrics";
 import Whatwebuild from "../components/Whatwebuild";
 import { PricingSection } from "../components/PricingSection";
 import HowWeDeliver from "../components/HowWeDeliver";
+import { Pakages } from "@/components/Pakages";
 
 const HomePage = () => {
   return (
@@ -16,7 +17,7 @@ const HomePage = () => {
     >
       <Hero />
       <Metrics />
-      <Whatwebuild />
+      <Pakages />
       <PricingSection />
       <HowWeDeliver />
     </div>

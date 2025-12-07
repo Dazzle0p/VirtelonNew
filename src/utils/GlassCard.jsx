@@ -1,4 +1,3 @@
-// Reusable Card Component
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import GlassButton from "./GlassButton";

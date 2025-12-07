@@ -224,9 +224,7 @@ const ROBSection = () => {
           >
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
               <Shield className="w-4 h-4 text-green-400" />
-              <span className="text-sm text-slate-300">
-                Fixed Scope & Price
-              </span>
+              <span className="text-sm text-slate-300">Fixed Scope</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
               <Clock className="w-4 h-4 text-blue-400" />
@@ -272,7 +270,7 @@ const ROBSection = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {[
                 {
-                  title: "Fixed Pricing",
+                  title: "Reasonable Pricing",
                   description: "No hidden costs or hourly billing surprises",
                   icon: <DollarSign className="w-6 h-6" />,
                   color: "from-green-500/20 to-emerald-500/20",
