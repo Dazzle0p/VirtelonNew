@@ -9,36 +9,36 @@ const Layout = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Initialize AOS
+    // Initialized AOS with mobile support
     AOS.init({
-      duration: 800,
+      duration: 600, // Slightly faster on mobile
       once: true,
-      offset: 100,
-      delay: 100,
+      offset: 50, // Lower offset for mobile
+      delay: 50, // Shorter delay for mobile
       easing: "ease-out-cubic",
-      disable: window.innerWidth < 768, // Optional: disable on mobile
+      disable: false, // ENABLE ON MOBILE
       startEvent: "DOMContentLoaded",
+      throttleDelay: 99,
+      debounceDelay: 50,
+      // Mobile settings:
+      mobile: true, // Enable on mobile
+      tablet: true, // Enable on tablet
     });
 
-    // Store AOS globally for easy access (optional)
+    // Store AOS globally
     window.AOS = AOS;
 
-    // Refresh AOS when window loads
-    const handleLoad = () => AOS.refresh();
-    window.addEventListener("load", handleLoad);
-
     return () => {
-      window.removeEventListener("load", handleLoad);
+      // Optional cleanup
+      AOS.refreshHard();
     };
   }, []);
 
   useEffect(() => {
-    // Refresh AOS when route changes (after a small delay to allow DOM to update)
-    const timer = setTimeout(() => {
+    // Refresh AOS on route change
+    setTimeout(() => {
       AOS.refresh();
-    }, 50);
-
-    return () => clearTimeout(timer);
+    }, 100);
   }, [location.pathname]);
 
   return (
