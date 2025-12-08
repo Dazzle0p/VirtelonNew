@@ -222,10 +222,6 @@ export default function ProjectPage() {
                 </svg>
               </span>
             </button>
-
-            <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-full text-white font-medium border border-white/10 hover:bg-white/5 transition-all hover:border-white/30 backdrop-blur-sm text-sm sm:text-base">
-              Download Case Studies
-            </button>
           </div>
         </section>
 

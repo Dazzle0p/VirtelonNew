@@ -13,6 +13,7 @@ import {
   Headphones,
   Shield,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const ServiceCard = ({ title, subtitle, icon, gradient, index }) => {
   const Icon = icon;
@@ -92,6 +93,7 @@ const getFeatures = (title) => {
 };
 
 const AdvancedEngineering = () => {
+  const Navigate = useNavigate();
   const services = [
     {
       title: "Web Scraping & Data Engineering",
@@ -195,16 +197,15 @@ const AdvancedEngineering = () => {
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            <button className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-bold rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] text-sm sm:text-base">
+            <button
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-bold rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] text-sm sm:text-base"
+              onClick={() => Navigate("/robs")}
+            >
               <div className="absolute inset-0 rounded-full bg-white blur-md opacity-40 group-hover:opacity-60 transition-opacity" />
               <span className="relative flex items-center gap-2">
                 Start Advanced Project
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </span>
-            </button>
-
-            <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-full text-white font-medium border border-white/10 hover:bg-white/5 transition-all hover:border-white/30 backdrop-blur-sm text-sm sm:text-base">
-              View Case Studies
             </button>
           </div>
         </section>
