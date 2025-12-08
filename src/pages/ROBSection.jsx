@@ -105,7 +105,7 @@ const PricingCard = ({ plan, index }) => {
         </div>
 
         {/* Features */}
-        <div className="flex-grow mb-8">
+        <div className="grow mb-8">
           <h4 className="text-sm font-semibold text-slate-300 uppercase tracking-widest mb-4 flex items-center gap-2">
             <Check className="w-4 h-4" />
             What's Included
@@ -214,7 +214,7 @@ const ROBSection = () => {
             data-aos-delay="300"
           >
             Select a package designed for your current stage. No hourly billing
-            surprises—just shipped code and predictable outcomes.
+            surprises - just shipped code and predictable outcomes.
           </p>
 
           <div

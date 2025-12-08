@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import {
   Globe,
   Smartphone,
@@ -48,8 +49,8 @@ const ServiceCard = ({ service, index }) => {
         </div>
 
         {/* Icon and Header */}
-        <div className="relative z-10 mb-4">
-          <div className="flex items-start justify-between mb-3">
+        <div className=" relative z-10 md:mb-4">
+          <div className="hidden md:flex items-start justify-between mb-3">
             <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white">
               <Icon className="w-6 h-6" />
             </div>
@@ -293,6 +294,8 @@ const ServicesPage = () => {
     },
   ];
 
+  const Navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-background-dark text-slate-200 relative overflow-hidden selection:bg-neon-purple selection:text-white">
       {/* Noise Texture */}
@@ -326,12 +329,8 @@ const ServicesPage = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Comprehensive{" "}
+            Comprehensive Digital{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple via-indigo-400 to-blue-500">
-              Digital
-            </span>
-            <br className="hidden md:block" />
-            <span className="text-white drop-shadow-2xl">
               Engineering Services
             </span>
           </h1>
@@ -352,21 +351,20 @@ const ServicesPage = () => {
             data-aos-delay="400"
           >
             <button className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-bold rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] text-sm sm:text-base">
-              <div className="absolute inset-0 rounded-full bg-white blur-md opacity-40 group-hover:opacity-60 transition-opacity" />
+              <div
+                className="absolute inset-0 rounded-full bg-white blur-md opacity-40 group-hover:opacity-60 transition-opacity"
+                onClick={() => Navigate("/robs")}
+              />
               <span className="relative flex items-center gap-2">
                 Start Your Project
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </button>
-
-            <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-full text-white font-medium border border-white/10 hover:bg-white/5 transition-all hover:border-white/30 backdrop-blur-sm text-sm sm:text-base">
-              Download Service Catalog
-            </button>
           </div>
         </section>
 
         {/* SERVICE CATEGORIES TABS */}
-        <section className="py-12 px-4 sm:px-6 max-w-7xl mx-auto">
+        <section className="md:py-12 px-4 sm:px-6 max-w-7xl mx-auto">
           <div
             className="glass-panel rounded-3xl p-6 md:p-8"
             data-aos="fade-up"
@@ -411,7 +409,7 @@ const ServicesPage = () => {
         </section>
 
         {/* SERVICES GRID */}
-        <section className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
+        <section className=" md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service, index) => (
               <ServiceCard
@@ -582,11 +580,11 @@ const ServicesPage = () => {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="glass-panel p-6 rounded-2xl group hover:bg-white/[0.03] transition-all duration-300"
+                  className="grid grid-cols-2 gap-1 md:block glass-panel p-6 rounded-2xl group hover:bg-white/[0.03] transition-all duration-300"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-white/10 flex items-center justify-center text-white mb-4">
+                  <div className="hidden w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-white/10 md:flex items-center justify-center text-white mb-4">
                     {benefit.icon}
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">

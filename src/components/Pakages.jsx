@@ -1,5 +1,7 @@
 import { Target, Sparkles, Check } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 export const Pakages = () => {
+  const Navigate = useNavigate();
   return (
     <section className="py-16 md:py-24 px-4 sm:px-6 bg-[#050507]">
       <div className="max-w-7xl mx-auto">
@@ -64,7 +66,10 @@ export const Pakages = () => {
                 </li>
               </ul>
 
-              <button className="w-full py-3 rounded-xl bg-green-500/10 border border-green-500/20 text-green-400 hover:bg-green-500/20 transition-all font-medium">
+              <button
+                className="w-full py-3 rounded-xl bg-green-500/10 border border-green-500/20 text-green-400 hover:bg-green-500/20 transition-all font-medium"
+                onClick={() => Navigate("/core-builds")}
+              >
                 Explore Core Builds
               </button>
             </div>
@@ -114,7 +119,10 @@ export const Pakages = () => {
                 </li>
               </ul>
 
-              <button className="w-full py-3 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 hover:bg-purple-500/20 transition-all font-medium">
+              <button
+                className="w-full py-3 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 hover:bg-purple-500/20 transition-all font-medium"
+                onClick={() => Navigate("/adv-eng")}
+              >
                 Explore Advanced Engineering
               </button>
             </div>

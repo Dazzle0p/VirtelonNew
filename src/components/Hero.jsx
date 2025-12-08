@@ -9,7 +9,7 @@ export default function Hero() {
 
       <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none" />
 
-      <div className="relative z-10 flex flex-col items-center justify-center px-6 max-w-6xl mx-auto text-center flex-1">
+      <div className="relative z-10 flex flex-col items-center justify-center px-6  mx-auto text-center flex-1">
         {/* Top Badge */}
         <div className="mt-10 md:mt-5 mb-10 px-6 py-2 rounded-full">
           <button
@@ -34,7 +34,7 @@ export default function Hero() {
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-white leading-[1.15] mb-6">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-semibold tracking-tight text-white leading-[1.15] mb-6">
           When vision needs Velocity,
           <br />
           <span className="inline-flex items-baseline relative mt-2">

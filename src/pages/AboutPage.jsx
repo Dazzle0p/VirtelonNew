@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import { SERVICES, PROCESS_STEPS } from "../assets/projectData";
 import { ArrowRight, Target, Layers } from "lucide-react";
 import { CARD_THEMES, getCardTheme } from "../assets/cardThemes";
+import { useNavigate } from "react-router-dom";
 
 const AboutPage = () => {
+  const Navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background-dark text-slate-200 relative overflow-hidden selection:bg-neon-purple selection:text-white">
       {/* Noise Texture */}
@@ -42,7 +44,7 @@ const AboutPage = () => {
             Engineering that turns <br className="hidden md:block" />
             <span className="relative inline-block">
               <span className="absolute inset-0 bg-neon-purple/20 blur-2xl rounded-full" />
-              <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-neon-purple via-indigo-400 to-blue-500">
+              <span className="relative text-transparent bg-clip-text bg-linear-to-r from-neon-purple via-indigo-400 to-blue-500">
                 product friction
               </span>
             </span>
@@ -76,7 +78,10 @@ const AboutPage = () => {
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            <button className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-bold rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] text-sm sm:text-base">
+            <button
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-bold rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] text-sm sm:text-base"
+              onClick={() => Navigate("/robs")}
+            >
               <div className="absolute inset-0 rounded-full bg-white blur-md opacity-40 group-hover:opacity-60 transition-opacity" />
               <span className="relative flex items-center gap-2">
                 Start Growth{" "}
@@ -84,7 +89,10 @@ const AboutPage = () => {
               </span>
             </button>
 
-            <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-full text-white font-medium border border-white/10 hover:bg-white/5 transition-all hover:border-white/30 backdrop-blur-sm text-sm sm:text-base">
+            <button
+              className="px-6 sm:px-8 py-3 sm:py-4 rounded-full text-white font-medium border border-white/10 hover:bg-white/5 transition-all hover:border-white/30 backdrop-blur-sm text-sm sm:text-base"
+              onClick={() => Navigate("/services")}
+            >
               View Services
             </button>
           </div>
@@ -163,7 +171,7 @@ const AboutPage = () => {
         {/* ================= SERVICES ================= */}
         <section className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
           <div
-            className="flex flex-col md:flex-row items-start md:items-end justify-between gap-4 md:gap-6 mb-10 md:mb-16"
+            className="flex flex-col md:flex-row items-center md:items-end   md:justify-between gap-4 md:gap-6 mb-10 md:mb-16"
             data-aos="fade-up"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white ">
