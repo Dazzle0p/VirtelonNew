@@ -107,7 +107,7 @@ export default function Metrics() {
           >
             <div className="mt-4">
               <h3 className="text-5xl sm:text-6xl font-bold text-white mb-2 tracking-tight">
-                <CountUp from={0} to={10} duration={0.07} />+
+                <CountUp from={0} to={5} duration={0.07} />+
               </h3>
               <p className="text-xs md:text-sm font-semibold tracking-widest text-gray-500 uppercase">
                 Years of <span className="text-[#22c55e]">Experience</span>
@@ -252,7 +252,7 @@ export default function Metrics() {
             >
               <div className="mt-6">
                 <h3 className="text-8xl font-bold text-white mb-3 tracking-tight">
-                  <CountUp from={0} to={10} duration={0.07} />+
+                  <CountUp from={0} to={5} duration={0.07} />+
                 </h3>
                 <p className="text-[15px] font-semibold tracking-widest text-gray-500 uppercase">
                   Years of <span className="text-[#22c55e]">Experience</span>

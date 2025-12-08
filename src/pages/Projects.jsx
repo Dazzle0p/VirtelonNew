@@ -335,7 +335,7 @@ export default function ProjectPage() {
                   color: "from-blue-500 to-indigo-500",
                 },
                 {
-                  value: "10+",
+                  value: "5+",
                   label: "Years Experience",
                   color: "from-orange-500 to-red-500",
                 },

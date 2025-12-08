@@ -159,7 +159,7 @@ export const Pakages = () => {
                 {[
                   "Quick turnaround with predictable timelines",
                   "Standardized processes for consistent quality",
-                  "Budget-friendly with fixed pricing",
+                  "Budget-friendly with Fair pricing",
                 ].map((item, index) => (
                   <li
                     key={index}
