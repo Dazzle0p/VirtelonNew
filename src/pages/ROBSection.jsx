@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 import {
   Sparkles,
   Check,
@@ -22,6 +24,8 @@ const PricingCard = ({ plan, index }) => {
     Growth: <Rocket className="w-6 h-6" />,
     Scale: <Target className="w-6 h-6" />,
   };
+
+  const Navigate = useNavigate();
 
   return (
     <div
@@ -149,6 +153,7 @@ const PricingCard = ({ plan, index }) => {
               }
               group/btn
             `}
+            onClick={() => Navigate("/contact-us")}
           >
             <span className="relative z-10">{plan.cta}</span>
             <ArrowRight
@@ -240,12 +245,36 @@ const ROBSection = () => {
         </section>
 
         {/* PRICING CARDS */}
-        <section className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
+        <section className="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
             {ROB_PLANS.map((plan, i) => (
               <PricingCard key={i} plan={plan} index={i} />
             ))}
           </div>
+          {/* Bottom CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-20 text-center"
+          >
+            <div className="inline-block p-[1px] rounded-full bg-gradient-to-r from-transparent via-white/10 to-transparent">
+              <div className="px-8 py-4 rounded-full bg-white/[0.03] backdrop-blur-sm border border-white/5 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                <span className="text-slate-400 text-sm">
+                  Need a custom enterprise solution?
+                </span>
+
+                <button
+                  onClick={() => navigate("/contact-us")}
+                  className="group flex items-center gap-2 text-indigo-300 hover:text-white font-medium text-sm transition-colors"
+                >
+                  Contact Our Team
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
         </section>
 
         {/* COMPARISON SECTION */}
@@ -311,66 +340,6 @@ const ROBSection = () => {
                   <p className="text-slate-400 text-sm">{item.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA SECTION */}
-        <section className="py-16 md:py-32 px-4 sm:px-6">
-          <div className="max-w-5xl mx-auto">
-            <div
-              className="glass-panel rounded-3xl md:rounded-[2.5rem] p-8 md:p-12 lg:p-24 text-center relative overflow-hidden border-t border-white/20"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              {/* Glows */}
-              <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
-              <div className="absolute -top-16 -left-16 md:-top-24 md:-left-24 w-48 h-48 md:w-64 md:h-64 bg-neon-purple/20 blur-[60px] md:blur-[80px] rounded-full" />
-              <div className="absolute -bottom-16 -right-16 md:-bottom-24 md:-right-24 w-48 h-48 md:w-64 md:h-64 bg-blue-500/20 blur-[60px] md:blur-[80px] rounded-full" />
-
-              <div className="relative z-10">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg mb-6">
-                  Ready to Ship Code <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-blue-400">
-                    Without The Guesswork?
-                  </span>
-                </h2>
-
-                <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-                  Choose a package and get started immediately. No sales calls
-                  needed—just select, pay, and we begin.
-                </p>
-
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-                  <button className="px-8 md:px-12 py-3 md:py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-base md:text-lg font-bold rounded-full shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:shadow-[0_0_50px_rgba(37,99,235,0.7)] hover:scale-105 transition-all border border-white/20 flex items-center gap-3">
-                    Select Package & Start
-                    <ArrowRight className="w-5 h-5" />
-                  </button>
-
-                  <button className="px-6 md:px-10 py-3 md:py-4 rounded-full text-white font-medium border border-white/10 hover:bg-white/5 transition-all hover:border-white/30 backdrop-blur-sm">
-                    Schedule a Consultation
-                  </button>
-                </div>
-
-                <div className="mt-10 pt-8 border-t border-white/10">
-                  <p className="text-sm md:text-base text-slate-400">
-                    <span className="text-slate-300 font-semibold">
-                      All packages include:
-                    </span>
-                    <span className="ml-2 text-green-400">
-                      ✓ Technical Specifications
-                    </span>{" "}
-                    •
-                    <span className="ml-2 text-green-400">
-                      ✓ Weekly Progress Updates
-                    </span>{" "}
-                    •
-                    <span className="ml-2 text-green-400">
-                      ✓ Post-Launch Support
-                    </span>
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>

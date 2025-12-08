@@ -42,7 +42,7 @@ const Navbar = () => {
         `}
       >
         {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer">
+        <div className="flex items-center gap-2 cursor-pointer z-10">
           <Link to="/">
             <img
               src={logo}

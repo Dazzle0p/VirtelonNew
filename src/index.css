@@ -178,9 +178,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-@media (max-width: 768px) {
-  .disable-float-on-mobile {
-    animation: none !important;
-  }
-}

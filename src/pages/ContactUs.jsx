@@ -20,7 +20,7 @@ const ContactUs = () => {
     fullName: "",
     email: "",
     company: "",
-    budget: "",
+    phoneNumber: "",
     message: "",
   });
 
@@ -59,7 +59,7 @@ const ContactUs = () => {
     {
       icon: <Phone className="w-5 h-5" />,
       title: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+91 ",
       subtitle: "Mon-Fri, 9AM-6PM EST",
       color: "from-green-500/20 to-emerald-500/20",
     },
@@ -273,25 +273,19 @@ const ContactUs = () => {
                               placeholder="Your Company"
                             />
                           </div>
-
                           <div>
                             <label className="block text-sm font-medium text-slate-300 mb-3 flex items-center gap-2">
-                              <DollarSign className="w-4 h-4" />
-                              Estimated Budget
+                              <Building className="w-4 h-4" />
+                              Phone Number
                             </label>
-                            <select
-                              name="budget"
-                              value={formData.budget}
+                            <input
+                              type="text"
+                              name="phonenumber"
+                              value={formData.phoneNumber}
                               onChange={handleChange}
-                              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:border-neon-purple focus:outline-none transition-colors appearance-none"
-                            >
-                              <option value="">Select a budget range</option>
-                              {budgetRanges.map((range, index) => (
-                                <option key={index} value={range}>
-                                  {range}
-                                </option>
-                              ))}
-                            </select>
+                              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:border-neon-purple focus:outline-none transition-colors"
+                              placeholder="Phone Number"
+                            />
                           </div>
                         </div>
                       </div>
@@ -397,75 +391,6 @@ const ContactUs = () => {
                   <p className="text-slate-400 text-sm">{item.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FINAL CTA */}
-        <section className="py-16 md:py-32 px-4 sm:px-6">
-          <div className="max-w-5xl mx-auto">
-            <div
-              className="glass-panel rounded-3xl md:rounded-[2.5rem] p-8 md:p-12 lg:p-24 text-center relative overflow-hidden border-t border-white/20"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-              style={{
-                background:
-                  "radial-gradient(50% 50% at 50% 50%, rgba(30,41,88,0.4), rgba(10,10,20,0.4))",
-              }}
-            >
-              {/* Glows */}
-              <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
-              <div className="absolute -top-16 -left-16 md:-top-24 md:-left-24 w-48 h-48 md:w-64 md:h-64 bg-neon-purple/20 blur-[60px] md:blur-[80px] rounded-full" />
-              <div className="absolute -bottom-16 -right-16 md:-bottom-24 md:-right-24 w-48 h-48 md:w-64 md:h-64 bg-blue-500/20 blur-[60px] md:blur-[80px] rounded-full" />
-
-              <div className="relative z-10">
-                <div className="w-20 h-20 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-neon-purple to-indigo-600 flex items-center justify-center text-white shadow-neon-glow">
-                  <Sparkles className="w-10 h-10" />
-                </div>
-
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg mb-6">
-                  Still Have{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-blue-400">
-                    Questions?
-                  </span>
-                </h2>
-
-                <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-                  Check our FAQ or schedule a quick call with our technical lead
-                  to get specific answers.
-                </p>
-
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-                  <a
-                    href="mailto:contact@virtelon.com"
-                    className="px-8 md:px-12 py-3 md:py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-base md:text-lg font-bold rounded-full shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:shadow-[0_0_50px_rgba(37,99,235,0.7)] hover:scale-105 transition-all border border-white/20 flex items-center gap-3"
-                  >
-                    Email Us Directly
-                    <ArrowRight className="w-5 h-5" />
-                  </a>
-
-                  <button className="px-6 md:px-10 py-3 md:py-4 rounded-full text-white font-medium border border-white/10 hover:bg-white/5 transition-all hover:border-white/30 backdrop-blur-sm">
-                    Schedule a Call
-                  </button>
-                </div>
-
-                <div className="mt-10 pt-8 border-t border-white/10">
-                  <p className="text-sm md:text-base text-slate-400">
-                    <span className="text-slate-300 font-semibold">
-                      Working Hours:
-                    </span>{" "}
-                    Mon-Fri, 9AM-6PM EST •
-                    <span className="text-slate-300 font-semibold ml-4">
-                      Response Time:
-                    </span>{" "}
-                    1 Business Day •
-                    <span className="text-slate-300 font-semibold ml-4">
-                      Success Rate:
-                    </span>{" "}
-                    98%
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>

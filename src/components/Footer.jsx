@@ -13,16 +13,24 @@ import logo from "../assets/logo.png";
 const Footer = () => {
   const quickLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "#" },
-    { name: "Services", href: "#" },
-    { name: "ROBs", href: "#" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "ROBs", href: "/robs" },
   ];
 
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/virtelon.pvt.ltd/",
+      label: "Instagram",
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/company/virtelon-pvt-ltd/",
+      label: "LinkedIn",
+    },
     { icon: Youtube, href: "#", label: "YouTube" },
   ];
 

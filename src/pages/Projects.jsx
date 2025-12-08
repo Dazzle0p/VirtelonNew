@@ -51,10 +51,14 @@ const projects = [
     iconColor: "text-cyan-400",
   },
   {
-    title: "Mobile App Performance Optimization",
-    challenge: "Slow app loading and high crash rates.",
-    solution: "Code splitting, lazy loading, and memory management.",
-    outcome: ["70% faster load times", "99.9% crash-free sessions"],
+    title: "TopNotch Ads Dashboard upgradation",
+    challenge: "Manual workflows slowing onboarding and compliance.",
+    solution: "Automated decision engine + workflow orchestration layer.",
+    outcome: [
+      "43% faster processing",
+      "Near-zero errors",
+      "Instant audit trail",
+    ],
     gradient: "from-orange-400/10 to-red-500/10",
     borderColor: "border-white/5",
     iconColor: "text-orange-400",
@@ -197,32 +201,6 @@ export default function ProjectPage() {
             </span>{" "}
             for fast-moving teams across industries.
           </p>
-
-          <div
-            className="flex justify-center items-center gap-4 sm:gap-6"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <button className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-bold rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] text-sm sm:text-base">
-              <div className="absolute inset-0 rounded-full bg-white blur-md opacity-40 group-hover:opacity-60 transition-opacity" />
-              <span className="relative flex items-center gap-2">
-                View Live Demos
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
         </section>
 
         {/* PROJECTS GRID SECTION */}

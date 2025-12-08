@@ -297,64 +297,6 @@ const AdvancedEngineering = () => {
             </div>
           </div>
         </section>
-
-        {/* CTA SECTION */}
-        <section className="py-16 md:py-32 px-4 sm:px-6">
-          <div className="max-w-5xl mx-auto">
-            <div
-              className="glass-panel rounded-3xl md:rounded-[2.5rem] p-8 md:p-12 lg:p-24 text-center relative overflow-hidden border-t border-white/20"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              {/* Glows */}
-              <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
-              <div className="absolute -top-16 -left-16 md:-top-24 md:-left-24 w-48 h-48 md:w-64 md:h-64 bg-neon-purple/20 blur-[60px] md:blur-[80px] rounded-full" />
-              <div className="absolute -bottom-16 -right-16 md:-bottom-24 md:-right-24 w-48 h-48 md:w-64 md:h-64 bg-blue-500/20 blur-[60px] md:blur-[80px] rounded-full" />
-
-              <div className="relative z-10">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg mb-6">
-                  Ready for{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-blue-400">
-                    Advanced Engineering?
-                  </span>
-                </h2>
-
-                <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-                  Complex challenges require specialized solutions. Let's
-                  discuss your advanced engineering needs.
-                </p>
-
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-                  <button className="px-8 md:px-12 py-3 md:py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-base md:text-lg font-bold rounded-full shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:shadow-[0_0_50px_rgba(37,99,235,0.7)] hover:scale-105 transition-all border border-white/20 flex items-center gap-3">
-                    Schedule Technical Consultation
-                    <ArrowRight className="w-5 h-5" />
-                  </button>
-
-                  <button className="px-6 md:px-10 py-3 md:py-4 rounded-full text-white font-medium border border-white/10 hover:bg-white/5 transition-all hover:border-white/30 backdrop-blur-sm">
-                    View Success Stories
-                  </button>
-                </div>
-
-                <div className="mt-10 pt-8 border-t border-white/10">
-                  <p className="text-sm md:text-base text-slate-400">
-                    <span className="text-slate-300 font-semibold">
-                      Average project timeline:
-                    </span>{" "}
-                    2-6 months •
-                    <span className="text-slate-300 font-semibold ml-4">
-                      Team:
-                    </span>{" "}
-                    2-5 specialized engineers •
-                    <span className="text-slate-300 font-semibold ml-4">
-                      Success rate:
-                    </span>{" "}
-                    95%+
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );

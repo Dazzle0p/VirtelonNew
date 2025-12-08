@@ -37,6 +37,7 @@ const GlassButton = ({
 // ----------------- Main Pricing Card -----------------
 
 const PricingTier = ({ name, price, description, features, isPopular }) => {
+  const Navigate = useNavigate();
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -134,7 +135,10 @@ const PricingTier = ({ name, price, description, features, isPopular }) => {
             ))}
           </ul>
 
-          <GlassButton variant={isPopular ? "primary" : "secondary"}>
+          <GlassButton
+            variant={isPopular ? "primary" : "secondary"}
+            onClick={() => Navigate("/contact-us")}
+          >
             Subscribe Now
           </GlassButton>
         </div>

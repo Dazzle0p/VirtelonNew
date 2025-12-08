@@ -113,24 +113,6 @@ export const ROB_PLANS = [
     glowColor: "#22d3ee", // cyan-400
   },
   {
-    id: "maintenance",
-    title: "Maintenance & Stability ROB",
-    subtitle: "Keep your site stable, secure and always updated.",
-    features: [
-      "Full code audit",
-      "Up to 15 bug fixes",
-      "Security hardening",
-      "Speed optimization",
-      "1-month warranty",
-    ],
-    time: "5–10 Days",
-    scope: "Includes QA",
-    price: "₹18,000 – ₹45,000",
-    cta: "GET THIS ROB",
-    accentColor: "text-emerald-400",
-    glowColor: "#34d399", // emerald-400
-  },
-  {
     id: "growth",
     title: "Growth Engine ROB",
     subtitle: "Convert traffic into growth with measurable optimizations.",
@@ -148,5 +130,23 @@ export const ROB_PLANS = [
     accentColor: "text-purple-400",
     glowColor: "#c084fc", // purple-400
     isPopular: true,
+  },
+  {
+    id: "maintenance",
+    title: "Maintenance & Stability ROB",
+    subtitle: "Keep your site stable, secure and always updated.",
+    features: [
+      "Full code audit",
+      "Up to 15 bug fixes",
+      "Security hardening",
+      "Speed optimization",
+      "1-month warranty",
+    ],
+    time: "5–10 Days",
+    scope: "Includes QA",
+    price: "₹18,000 – ₹45,000",
+    cta: "GET THIS ROB",
+    accentColor: "text-emerald-400",
+    glowColor: "#34d399", // emerald-400
   },
 ];
