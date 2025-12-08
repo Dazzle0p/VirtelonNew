@@ -174,6 +174,7 @@ const PricingCard = ({ plan, index }) => {
 };
 
 const ROBSection = () => {
+  const Navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background-dark text-slate-200 relative overflow-hidden selection:bg-neon-purple selection:text-white">
       {/* Noise Texture */}
@@ -266,7 +267,7 @@ const ROBSection = () => {
                 </span>
 
                 <button
-                  onClick={() => navigate("/contact-us")}
+                  onClick={() => Navigate("/contact-us")}
                   className="group flex items-center gap-2 text-indigo-300 hover:text-white font-medium text-sm transition-colors"
                 >
                   Contact Our Team

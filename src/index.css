@@ -1,4 +1,8 @@
 /* src/index.css */
+html,
+body {
+  scroll-behavior: auto; /* avoid smooth scroll conflict */
+}
 
 /* 1. Import Tailwind CSS (This replaces @tailwind base/components/utilities) */
 @import "tailwindcss";
@@ -177,4 +181,13 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.input-box {
+  @apply w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2 outline-none text-white placeholder-white/40 focus:border-purple-400 transition;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
 }

@@ -42,7 +42,7 @@ const Navbar = () => {
         `}
       >
         {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer z-10">
+        <div className="flex items-center gap-2 cursor-pointer">
           <Link to="/">
             <img
               src={logo}
@@ -142,6 +142,17 @@ const Navbar = () => {
               </Link>
             );
           })}
+
+          <Link
+            to="/contact-us"
+            onClick={() => setIsOpen(false)}
+            className={`
+                  block w-full text-left py-3 text-white/70 border-b border-purple-500/10
+                  transition-all duration-300
+                `}
+          >
+            Contact Us
+          </Link>
         </div>
       )}
     </header>

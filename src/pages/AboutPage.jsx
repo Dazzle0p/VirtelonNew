@@ -19,10 +19,10 @@ const AboutPage = () => {
 
       <div className="relative z-10">
         {/* ================= HERO SECTION ================= */}
-        <section className="pt-25 pb-15 md:pt-25 md:pb-40 px-4 sm:px-6 text-center max-w-7xl mx-auto">
+        <section className="pt-25 pb-5 md:pt-25  px-4 sm:px-6 text-center max-w-7xl mx-auto">
           {/* Floating Badge */}
           <div
-            className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-md mb-8 md:mb-12 animate-float"
+            className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-md md:mt-7 mb-8 md:mb-12 animate-float"
             data-aos="fade-down"
             data-aos-delay="100"
           >
@@ -41,16 +41,12 @@ const AboutPage = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Engineering that turns <br className="hidden md:block" />
+            Where product friction <br className="hidden md:block" />
             <span className="relative inline-block">
               <span className="absolute inset-0 bg-neon-purple/20 blur-2xl rounded-full" />
               <span className="relative text-transparent bg-clip-text bg-linear-to-r from-neon-purple via-indigo-400 to-blue-500">
-                product friction
+                becomes growth
               </span>
-            </span>
-            <br className="hidden md:block" />
-            <span className="text-white drop-shadow-2xl">
-              into reliable growth
             </span>
           </h1>
 
@@ -74,7 +70,7 @@ const AboutPage = () => {
 
           {/* CTA */}
           <div
-            className="flex justify-center items-center gap-4 sm:gap-6 flex-col sm:flex-row"
+            className="flex justify-center items-center gap-4 sm:gap-6 flex-col flex-row"
             data-aos="fade-up"
             data-aos-delay="400"
           >
@@ -99,7 +95,7 @@ const AboutPage = () => {
         </section>
 
         {/* ================= BENTO GRID ================= */}
-        <section className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
+        <section className=" md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-6 md:gap-8">
             {/* Who we are */}
             <div
@@ -169,7 +165,7 @@ const AboutPage = () => {
         </section>
 
         {/* ================= SERVICES ================= */}
-        <section className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
+        <section className="py-5 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
           <div
             className="flex flex-col md:flex-row items-center md:items-end   md:justify-between gap-4 md:gap-6 mb-10 md:mb-16"
             data-aos="fade-up"
@@ -180,7 +176,7 @@ const AboutPage = () => {
             <div className="hidden md:block h-px flex-grow md:max-w-md bg-white/10 ml-8" />
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
             {SERVICES.map((service, i) => {
               const Icon = service.icon;
               const theme = getCardTheme(i);
@@ -236,7 +232,7 @@ const AboutPage = () => {
         </section>
 
         {/* ================= PROCESS STEPS ================= */}
-        <section className="py-16 md:py-24 px-4 sm:px-6 bg-black/20">
+        <section className="py-5 md:py-24 px-4 sm:px-6 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 md:mb-20" data-aos="fade-up">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
@@ -245,7 +241,7 @@ const AboutPage = () => {
               <div className="w-16 md:w-24 h-1 mx-auto bg-gradient-to-r from-neon-purple to-transparent rounded-full" />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-8 lg:gap-12">
               {PROCESS_STEPS.map((step, i) => {
                 const StepIcon = step.icon;
                 return (

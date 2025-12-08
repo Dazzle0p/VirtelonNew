@@ -293,68 +293,6 @@ export default function ProjectPage() {
             </div>
           </div>
         </section>
-
-        {/* CTA SECTION */}
-        <section className="py-16 md:py-20 lg:py-32 px-4 sm:px-6">
-          <div className="max-w-5xl mx-auto">
-            <div
-              className="glass-panel rounded-3xl md:rounded-[2.5rem] p-8 md:p-12 lg:p-24 text-center relative overflow-hidden border-t border-white/20"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              {/* Glows */}
-              <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
-              <div className="absolute -top-16 -left-16 md:-top-24 md:-left-24 w-48 h-48 md:w-64 md:h-64 bg-neon-purple/20 blur-[60px] md:blur-[80px] rounded-full" />
-              <div className="absolute -bottom-16 -right-16 md:-bottom-24 md:-right-24 w-48 h-48 md:w-64 md:h-64 bg-blue-500/20 blur-[60px] md:blur-[80px] rounded-full" />
-
-              <div className="relative z-10">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight drop-shadow-lg mb-6 md:mb-10">
-                  Ready to build something <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-blue-400">
-                    industry-grade?
-                  </span>
-                </h2>
-
-                <p className="text-lg md:text-xl text-slate-300 mb-8 md:mb-12 max-w-2xl mx-auto">
-                  Let's architect the next outcome together. Schedule a
-                  discovery call to discuss your project requirements.
-                </p>
-
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-                  <button className="px-8 md:px-12 py-3 md:py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-base md:text-lg font-bold rounded-full shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:shadow-[0_0_50px_rgba(37,99,235,0.7)] hover:scale-105 transition-all border border-white/20 flex items-center gap-2 md:gap-3">
-                    Start a Discovery Call
-                    <svg
-                      className="w-4 h-4 md:w-5 md:h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      />
-                    </svg>
-                  </button>
-
-                  <button className="px-6 md:px-10 py-3 md:py-4 rounded-full text-white font-medium border border-white/10 hover:bg-white/5 transition-all hover:border-white/30 backdrop-blur-sm">
-                    View All Case Studies
-                  </button>
-                </div>
-
-                <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-white/10">
-                  <p className="text-sm md:text-base text-slate-400">
-                    <span className="text-slate-300 font-semibold">
-                      Average response time:
-                    </span>{" "}
-                    2 hours
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );

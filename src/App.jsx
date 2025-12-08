@@ -9,6 +9,7 @@ import ProjectPage from "./pages/Projects";
 import AdvancedEngineering from "./pages/AdvancedEngineering";
 import CoreBuilds from "./pages/CoreBuilds";
 import ServicesPage from "./pages/ServicesPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Important: You must ensure the 'Megabyte' font is correctly imported and available,
 // likely through your public/index.html or the main CSS file.
@@ -18,6 +19,7 @@ import ServicesPage from "./pages/ServicesPage";
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
