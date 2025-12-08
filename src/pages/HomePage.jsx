@@ -5,6 +5,7 @@ import Whatwebuild from "../components/Whatwebuild";
 import { PricingSection } from "../components/PricingSection";
 import HowWeDeliver from "../components/HowWeDeliver";
 import { Pakages } from "@/components/Pakages";
+import CTA from "@/components/CTA";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
       <Pakages />
       <PricingSection />
       <HowWeDeliver />
+      <CTA />
     </div>
   );
 };

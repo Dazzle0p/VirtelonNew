@@ -4,7 +4,6 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import CTA from "../CTA";
 
 const Layout = () => {
   const location = useLocation();
@@ -48,7 +47,6 @@ const Layout = () => {
       <main>
         <Outlet />
       </main>
-      <CTA />
       <Footer />
     </>
   );

@@ -3,6 +3,7 @@ import { SERVICES, PROCESS_STEPS } from "../assets/projectData";
 import { ArrowRight, Target, Layers } from "lucide-react";
 import { CARD_THEMES, getCardTheme } from "../assets/cardThemes";
 import { useNavigate } from "react-router-dom";
+import CTA from "@/components/CTA";
 
 const AboutPage = () => {
   const Navigate = useNavigate();
@@ -280,6 +281,9 @@ const AboutPage = () => {
             </div>
           </div>
         </section>
+
+        {/* CTA */}
+        <CTA />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeader from "@/utils/SectionHeader";
 import { Shield, Clock, Zap } from "lucide-react";
+import CTA from "@/components/CTA";
 
 const projects = [
   {
@@ -358,6 +359,8 @@ export default function ProjectPage() {
             </div>
           </div>
         </section>
+        {/* CTA */}
+        <CTA />
       </div>
     </div>
   );

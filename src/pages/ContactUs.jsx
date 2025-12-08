@@ -24,9 +24,9 @@ const ContactUs = () => {
     setIsSubmitting(true);
 
     // ------- EmailJS Config -------
-    const SERVICE_ID = "service_qqtzipf";
-    const TEMPLATE_ID = "template_r0fswua";
-    const PUBLIC_KEY = "LmQFkfoDvLaWEoBP9";
+    const SERVICE_ID = import.meta.env.VITE_MAIL_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_MAIL_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_MAIL_PUBLIC_KEY;
 
     try {
       await emailjs.sendForm(
@@ -116,6 +116,25 @@ const ContactUs = () => {
             Tell us your goals, timelines, and what you’re building. We’ll
             connect you with the right engineering team.
           </p>
+
+          <div
+            className="flex flex-row items-center justify-center gap-4 sm:gap-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+              <Phone className="w-4 h-4 text-green-400" />
+              <span className="text-sm text-slate-300">Contact</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+              <Mail className="w-4 h-4 text-blue-400" />
+              <span className="text-sm text-slate-300">Collaborate</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+              <Clock className="w-4 h-4 text-yellow-400" />
+              <span className="text-sm text-slate-300">Create</span>
+            </div>
+          </div>
         </section>
 
         {/* CONTACT METHODS */}

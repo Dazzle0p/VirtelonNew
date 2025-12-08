@@ -28,6 +28,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Pakages } from "@/components/Pakages";
+import CTA from "@/components/CTA";
 
 // Service Card Component
 const ServiceCard = ({ service, index }) => {
@@ -471,6 +472,8 @@ const ServicesPage = () => {
             </div>
           </div>
         </section>
+        {/* CTA */}
+        <CTA />
       </div>
     </div>
   );

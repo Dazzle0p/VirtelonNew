@@ -18,6 +18,7 @@ import {
   Target,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import CTA from "@/components/CTA";
 
 const ServiceCard = ({ title, subtitle, icon, gradient, index }) => {
   const Icon = icon;
@@ -427,6 +428,9 @@ const CoreBuilds = () => {
             </div>
           </div>
         </section>
+
+        {/* CTA */}
+        <CTA />
       </div>
     </div>
   );
