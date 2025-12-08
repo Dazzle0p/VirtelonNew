@@ -203,14 +203,18 @@ const ROBSection = () => {
             </span>
           </div>
 
+          {/* Headline */}
           <h1
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.1] sm:leading-[1.05] mb-6 md:mb-10"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Launch-Ready,{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple via-indigo-400 to-blue-500">
-              Engineering Packages
+            Launch-Ready, <br className="hidden md:block" />
+            <span className="relative inline-block">
+              <span className="absolute inset-0 bg-neon-purple/20 blur-2xl rounded-full" />
+              <span className="relative text-transparent bg-clip-text bg-linear-to-r from-neon-purple via-indigo-400 to-blue-500">
+                Engineering Packages
+              </span>
             </span>
           </h1>
 

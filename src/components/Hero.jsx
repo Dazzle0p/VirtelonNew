@@ -32,7 +32,7 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col items-center sm:mt-10 justify-center px-6 mx-auto text-center flex-1 w-full max-w-6xl">
         {/* Top Badge with Animation */}
         <div
-          className="mt-5 md:mt-5 mb-10"
+          className="mt-10 md:mt-5 mb-10 z-60"
           data-aos="fade-down"
           data-aos-delay="300"
         >

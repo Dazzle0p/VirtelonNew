@@ -64,6 +64,51 @@ const projects = [
     borderColor: "border-white/5",
     iconColor: "text-orange-400",
   },
+  {
+    title: "E-commerce Platform for Clothing Brand (Pune)",
+    challenge:
+      "Brand needed a modern D2C store with fast load times and clean UX to compete in a saturated apparel market.",
+    solution:
+      "Built a custom e-commerce storefront with optimized product flows, smart filters, and a checkout experience tuned for conversions.",
+    outcome: [
+      "29% increase in product-page engagement",
+      "Faster mobile performance across regions",
+      "Streamlined catalog management for internal team",
+    ],
+    gradient: "from-red-400/10 to-purple-500/10",
+    borderColor: "border-white/5",
+    iconColor: "text-red-400",
+  },
+  {
+    title: "Shopify Website for Home Decor Brand (UK)",
+    challenge:
+      "Existing store lacked structure, visual appeal, and international conversion readiness.",
+    solution:
+      "Designed and launched a Shopify theme with high-end visuals, optimized product storytelling, and localization-ready architecture.",
+    outcome: [
+      "34% uplift in add-to-cart rate",
+      "Reduced bounce rate on landing pages",
+      "Improved backend workflows through Shopify automation",
+    ],
+    gradient: "from-purple-400/10 to-blue-400/10",
+    borderColor: "border-white/5",
+    iconColor: "text-purple-400",
+  },
+  {
+    title: "ATF Social Game & Software Platform (Dubai)",
+    challenge:
+      "Client needed a scalable gaming + social ecosystem capable of handling real-time interactions and rapid feature releases.",
+    solution:
+      "Engineered a modular backend, matchmaking logic, event pipeline, and a polished UX framework to support future expansions.",
+    outcome: [
+      "Stable real-time performance under heavy load",
+      "Faster feature deployment cycles",
+      "Architecture ready for multi-region scaling",
+    ],
+    gradient: "from-blue-400/10 to-purple-500/10",
+    borderColor: "border-white/5",
+    iconColor: "text-blue-400",
+  },
 ];
 
 const ProjectCard = ({
@@ -175,18 +220,18 @@ export default function ProjectPage() {
             </span>
           </div>
 
+          {/* Headline */}
           <h1
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.1] sm:leading-[1.05] mb-6 md:mb-10"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Engineered{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple via-indigo-400 to-blue-500">
-              Outcomes
-            </span>
-            <br className="hidden md:block" />
-            <span className="text-white drop-shadow-2xl">
-              That Drive Impact
+            Engineered Outcomes
+            <span className="relative inline-block">
+              <span className="absolute inset-0 bg-neon-purple/20 blur-2xl rounded-full" />
+              <span className="relative text-transparent bg-clip-text bg-linear-to-r from-neon-purple via-indigo-400 to-blue-500">
+                That Drive Impact
+              </span>
             </span>
           </h1>
 
@@ -204,7 +249,7 @@ export default function ProjectPage() {
           </p>
 
           <div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+            className="flex flex-row items-center justify-center gap-4 sm:gap-6"
             data-aos="fade-up"
             data-aos-delay="400"
           >
@@ -224,7 +269,7 @@ export default function ProjectPage() {
         </section>
 
         {/* PROJECTS GRID SECTION */}
-        <section className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
+        <section className="py-5 md:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
           <SectionHeader
             tag="Selected Work"
             title="Industry-Leading"
