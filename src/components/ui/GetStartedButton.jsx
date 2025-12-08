@@ -33,7 +33,7 @@ export default function GetStartedButton() {
               Get started
             </p>
           </div>
-          <div className=" group-hover:ml-4 ease-in-out transition-all size-[24px] flex items-center justify-center rounded-full border-2 ">
+          <div className=" group-hover:ml-4 ease-in-out transition-all size-[24px] flex items-center justify-center rounded-full border-2 border-[#361D88]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="14"

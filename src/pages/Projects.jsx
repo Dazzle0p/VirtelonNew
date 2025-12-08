@@ -1,5 +1,6 @@
 import React from "react";
 import SectionHeader from "@/utils/SectionHeader";
+import { Shield, Clock, Zap } from "lucide-react";
 
 const projects = [
   {
@@ -170,7 +171,7 @@ export default function ProjectPage() {
               <span className="relative h-2.5 w-2.5 rounded-full bg-neon-purple shadow-[0_0_10px_#9f79f2]" />
             </span>
             <span className="text-sm font-semibold text-slate-200 tracking-wide uppercase">
-              Projects - Case Studies
+              Projects
             </span>
           </div>
 
@@ -201,6 +202,25 @@ export default function ProjectPage() {
             </span>{" "}
             for fast-moving teams across industries.
           </p>
+
+          <div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+              <Shield className="w-4 h-4 text-green-400" />
+              <span className="text-sm text-slate-300">Design</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+              <Clock className="w-4 h-4 text-blue-400" />
+              <span className="text-sm text-slate-300">Develop</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+              <Zap className="w-4 h-4 text-yellow-400" />
+              <span className="text-sm text-slate-300">Deploy</span>
+            </div>
+          </div>
         </section>
 
         {/* PROJECTS GRID SECTION */}

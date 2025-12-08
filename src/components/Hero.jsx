@@ -32,7 +32,7 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col items-center sm:mt-10 justify-center px-6 mx-auto text-center flex-1 w-full max-w-6xl">
         {/* Top Badge with Animation */}
         <div
-          className="mt-10 md:mt-5 mb-10"
+          className="mt-5 md:mt-5 mb-10"
           data-aos="fade-down"
           data-aos-delay="300"
         >
@@ -58,43 +58,23 @@ export default function Hero() {
         </div>
 
         {/* Main Headline with Silver-Gray Gradient */}
-        <div className="mb-6 px-4" data-aos="fade-up" data-aos-delay="400">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.1] md:leading-[1.05]">
-            {/* First Line */}
-            <span className="block mb-2 md:mb-4">
-              <span className="bg-gradient-to-r from-gray-400 via-gray-300 to-gray-400 bg-clip-text text-transparent">
-                When vision needs
-              </span>
-            </span>
 
-            {/* Second Line */}
-            <span className="block mb-2 md:mb-4">
-              <span className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-clip-text text-transparent">
-                Velocity,
-              </span>
+        <div className="mb-8 max-w-5xl" data-aos="fade-up" data-aos-delay="300">
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1]">
+            <span className="block text-white">When vision needs</span>
+            <span className="block bg-gradient-to-r from-gray-400 via-white to-gray-400 bg-clip-text text-transparent pb-2">
+              Velocity,
             </span>
-
-            {/* Third Line with "Engine" highlight */}
-            <span className="block">
-              <span className="inline-flex items-baseline">
-                <span className="bg-gradient-to-r from-gray-400 via-gray-300 to-gray-400 bg-clip-text text-transparent">
-                  we build the{" "}
-                </span>
-                <span className="ml-2 md:ml-4 relative">
-                  {/* Main Engine text with sharp silver gradient */}
-                  <span className="bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-clip-text text-transparent font-bold italic tracking-tighter">
-                    Engine
-                  </span>
-                  {/* Subtle glow effect */}
-                  <span className="absolute inset-0 bg-gradient-to-r from-gray-400/30 via-gray-300/30 to-gray-400/30 bg-clip-text text-transparent blur-sm opacity-50">
-                    Engine
-                  </span>
-                </span>
+            <span className="block mt-2">
+              <span className="font-medium text-transparent bg-gradient-to-br from-gray-300 via-gray-200 to-gray-400 bg-clip-text text-5xl">
+                we build the{" "}
+              </span>
+              <span className="font-serif italic bg-gradient-to-b from-white via-gray-200 to-gray-500 bg-clip-text text-transparent pr-2">
+                Engine
               </span>
             </span>
           </h1>
         </div>
-
         {/* Subtext with Silver-Gray Gradient */}
         <div
           className="mb-10 px-4 max-w-2xl"
